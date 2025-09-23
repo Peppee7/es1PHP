@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<form action="table.php">
+		<table WIDTH="45%" BORDER="1" CELLSPACING="1" CELLPADDING="1">
+			<tr> 
+				<td width="46%">Località
+				<td width="54%"><input name="localita" type=text> 
+			<tr>
+			<tr> 
+				<td width="46%">Altitudine
+				<td width="54%"><input name="altitudine" type=text> 
+			<tr> 
+			<tr> 
+				<td width="46%">Data
+				<td width="54%"><input name="data" type=text> 
+			<tr> 
+			<tr> 
+				<td width="46%">Ora
+				<td width="54%"><input name="ora" type=text> 
+			<tr>
+			<tr> 
+				<td width="46%">Tipo rilevazione
+				<td width="54%"><input name="tipologia" type=radio value="OFC">
+									<label for="ofc">OFC</label>
+								<input name="tipologia" type=radio value="AMB">
+									<label for="amb">AMB</label>
+								<input name="tipologia" type=radio value="DRA">
+									<label for="dra">DRA</label>
+			<tr>
+			<tr>
+				<td width="46%">Umidità
+				<td width="54%"><select id="umidita" name="umidita">
+									<option value="assoluta">Assoluta</option>
+									<option value="relativa">Relativa</option>
+								</select>
+			<tr>
+			<tr>
+				<td width="46%">Clima
+				<td width="54%"><select id="clima" name="clima">
+									<option value="pioggia">Pioggia</option>
+									<option value="sereno">Sereno</option>
+									<option value="ventoso">Ventoso</option>
+									<option value="umido">Umido</option>
+									<option value="foschia">Foschia</option>
+								</select>
+			<tr>
+
+			<input name="btn" type=submit value="INVIA"> 
+		</table>
+	</form>
+</body>
+</html>
