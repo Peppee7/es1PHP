@@ -6,23 +6,27 @@
     $quantita = $_POST['products_number'];
 
     $prezzo = 0;
-    if ($prodotto == "mela")
-    {
+
+    if ($prodotto == "mela") {
         $prezzo = 1;
-    } elseif ($prodotto == "banana")
-    {
-       $prezzo = 2;
+    }  elseif ($prodotto == "banana") {
+        $prezzo = 2;
     } else {
         $prezzo = 3;
     }
 
+    $prezzo_totale = $prezzo * $quantita;
+    
     $iva = 4;
-    $sconto = 0.30;
+    $sconto = 0.90;
 
-    $prezzo_totale = $prezzo + ($prezzo * $iva) / 100;
+    $iva = ($prezzo_totale * $iva) / 100;
+    $prezzo_totale = $prezzo_totale + $iva;
 
     if($quantita >= 10) {
-        $prezzo_totale = $prezzo_totale - $sconto;
+        $prezzo_sconto = $prezzo_totale * $sconto;
+    } else {
+        $prezzo_sconto = $prezzo_totale;
     }
 ?>
 
@@ -48,9 +52,13 @@
             <td width="50%"><?php echo $quantita; ?>
         <tr>
         <tr> 
-            <td width="50%">Somma da pagare</td>
+            <td width="50%">Somma totale</td>
             <td width="50%"><?php echo $prezzo_totale." euro"; ?>
         <tr>
+        <tr> 
+            <td width="50%">Somma scontata</td>
+            <td width="50%"><?php echo $prezzo_sconto." euro"; ?>
+        <tr></tr>
     </table>
 </body>
 </html>
