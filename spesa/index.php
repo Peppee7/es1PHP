@@ -9,7 +9,7 @@
 
     if ($prodotto == "mela") {
         $prezzo = 1;
-    }  elseif ($prodotto == "banana") {
+    } elseif ($prodotto == "banana") {
         $prezzo = 2;
     } else {
         $prezzo = 3;
@@ -23,7 +23,7 @@
     $iva = ($prezzo_totale * $iva) / 100;
     $prezzo_totale = $prezzo_totale + $iva;
 
-    if($quantita >= 10) {
+    if ($quantita >= 10) {
         $prezzo_sconto = $prezzo_totale * $sconto;
     } else {
         $prezzo_sconto = $prezzo_totale;
